@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battle Bots - Autonomous Racing Challenge</title>
+    <title>Tech Symposium - I&AI 2.0 </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,54 +43,60 @@
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Battle Bots - Autonomous Racing Challenge</h1>
-
-        <h2>Round 1: The Qualifier</h2>
-        <p>🔹 The track features circular curves to test robot maneuverability.<br>
-           🔹 Checkpoints grant points upon successful crossings.<br>
-           🔹 Top 8 teams advance to the next stage.</p>
-
-        <h2>Round 2: The Ultimate Challenge</h2>
-        <p>🔹 A more complex track with ramps, obstacles, and 10-degree inclinations.<br>
-           🔹 The track includes sharp 90° turns and various angles to test adaptability.<br>
-           🔹 Checkpoints available for additional points.</p>
-
-        <div class="rules">
-            <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
-            <div class="rule-content" id="rules">
-                <p>• The robot must be fully autonomous and pose no danger.<br>
-                   • Maximum 4 members per team.<br>
-                   • No external connections allowed during the race.<br>
-                   • Only the team leader can handle the robot during the competition.<br>
-                   • Robots must start only with organizer approval.<br>
-                   • No modifications are allowed during the event.<br>
-                   • If a robot moves out of bounds, it must restart from the nearest checkpoint.<br>
-                   • Each team gets 3 restarts per round (with time penalties).<br>
-                   • The robot must complete the track within the given time limit.<br>
-                   • Track width: 2 cm | Robot dimensions: max 20x20x20 cm.</p>
+        <div class="container">
+            <h1>I&AI 2.0 – AI-Powered Coding Challenge</h1>
+            <h2>NOVICE</h2>
+            <p><strong>Round 1: Googler – AI-Powered Knowledge Battle</strong></p>
+            <p>🔹 Answer a set of challenging questions within a limited time.<br>
+               🔹 Use any AI tool to find the most accurate answers.<br>
+               🔹 Submit responses through a Google Form.<br>
+               🔹 Teams with the highest scores will qualify for the next round.</p>
+            <p><strong>Round 2: AI-Enhanced Game Creation</strong></p>
+            <p>🔹 Develop a 2D game based on a given theme.<br>
+               🔹 Use AI tools to generate and optimize the game code.<br>
+               🔹 The game’s functionality and execution will determine qualification for the final round.</p>
+            <p><strong>Round 3: Game Enhancement & AI Evaluation</strong></p>
+            <p>🔹 Enhance and optimize your game from Round 2.<br>
+               🔹 AI tools can be used to improve code efficiency, design, and gameplay mechanics.<br>
+               🔹 Evaluation will be conducted by an AI-based rating system.<br>
+               🔹 The team with the highest-rated game will be crowned the winner!</p>
+            
+            <h2>EXPERT</h2>
+            <p><strong>Round 1: MINI-HACKATHON</strong></p>
+            <p>🔹 Challenge: Develop a creative and engaging game based on the provided theme.<br>
+               🔹 AI Assistance: Utilize any AI tools to enhance your development process.<br>
+               🔹 Time Limit: Participants will have 4 hours to complete their game.<br>
+               🔹 Evaluation: A panel of experts will assess the games based on innovation, functionality, and user experience.<br>
+               🔹 Winner Announcement: The best game will be declared the winner.</p>
+            
+            <div class="rules">
+                <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+                <div class="rule-content" id="rules">
+                    <p>• Each team must have 2 or 3 participants.<br>
+                       • In Round 1, only one team member is allowed to submit answers.<br>
+                       • Participants must complete all rounds to be eligible for winning.<br>
+                       • Any AI tool can be used, but plagiarism will lead to disqualification.<br>
+                       • Judges' and AI evaluation decisions will be final.</p>
+                </div>
             </div>
+            
+            <h2>Registration</h2>
+            <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
+            
+            <h3>Student Coordinators:</h3>
+            <p>• Chinmay Keripale – 9130091352<br>
+               • Purva Powar Patil – 9579186400</p>
         </div>
-
-        <h2>Registration</h2>
-        <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
-
-        <h3>Student Coordinators:</h3>
-        <p>📞 Vaishnavi Pawar – 8446003515<br>
-           📞 Vishwajeet Patil – 7038823784</p>
-    </div>
-
-    <script>
-        function toggleRules() {
-            var rules = document.getElementById("rules");
-            if (rules.style.display === "none" || rules.style.display === "") {
-                rules.style.display = "block";
-            } else {
-                rules.style.display = "none";
+        
+        <script>
+            function toggleRules() {
+                var rules = document.getElementById("rules");
+                if (rules.style.display === "none" || rules.style.display === "") {
+                    rules.style.display = "block";
+                } else {
+                    rules.style.display = "none";
+                }
             }
-        }
-    </script>
-
-</body>
+        </script>
+    </body>
 </html>
