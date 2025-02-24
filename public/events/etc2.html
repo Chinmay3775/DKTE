@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Bots - Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .rules {
+            text-align: left;
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #eef;
+            border-radius: 5px;
+        }
+        .toggle-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .toggle-btn:hover {
+            background-color: #0056b3;
+        }
+        .google-form {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffd700;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Battle Bots - AI Racing Challenge</h1>
+    
+    <h2>Round 1</h2>
+    <p>1. The track will feature circular curves.</p> 
+    <p>2. Checkpoints will be strategically placed along the path, granting teams 
+        points upon crossing. </p>
+    <p>3. The top 8 teams from this round will advance to the next stage. </p>
+    
+    <h2>Round 2</h2>
+    <p>1. The track will present a more challenging layout with ramps and obstacles. </p>
+        <p>2. The path will also include 10-degree inclinations, adding an extra 
+        challenge for the robots to navigate successfully. </p>
+        <p>3. Sharp 90° turns, along with acute and obtuse angles, will be part of the 
+        track. </p>
+        <p>4. Checkpoints will be available to earn additional points.</p>
+
+    <button class="toggle-btn" onclick="toggleRules()">🔽 Event Rules</button>
+    <div class="rules" id="rules">
+        <ul>
+            <li>The robot must be fully autonomous and should not pose any danger.</li>
+            <li>Maximum of 4 members per team.</li>
+            <li>No external connections are allowed during the race.</li>
+            <li>Only the team leader can handle the robot during the competition.</li>
+            <li>Robots must be placed at the starting point with organizer approval.</li>
+            <li>No reprogramming, adding, or removing parts is allowed during the event.</li>
+            <li>If a robot moves out of bounds, it must restart from the nearest checkpoint.</li>
+            <li>Each team gets up to three restarts per round with a time penalty.</li>
+            <li>The robot must function autonomously after crossing the start line.</li>
+            <li>Track width: 2 cm | Max Robot Dimensions: 20x20x20 cm.</li>
+        </ul>
+    </div>
+
+    <div class="google-form">
+        <h2>📌 Registration</h2>
+        <p>The Google Form for registration will be added here soon.</p>
+        <!-- Replace the # with your Google Form link when ready -->
+        <a href="#" target="_blank">Click Here to Register</a>
+    </div>
+
+    <h3>Student Coordinators</h3>
+    <p>📞 Vaishnavi Pawar - 8446003515</p>
+    <p>📞 Vishwajeet Patil - 7038823784</p>
+</div>
+
+<script>
+    function toggleRules() {
+        var rules = document.getElementById("rules");
+        if (rules.style.display === "none" || rules.style.display === "") {
+            rules.style.display = "block";
+        } else {
+            rules.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
