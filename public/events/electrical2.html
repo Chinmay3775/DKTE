@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Symposium - Code Aura</title>
+    <title>Tech-Symposium 2K25 - Electro-Hunt</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,11 +19,23 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h1 {
             text-align: center;
+            color: #d18126;
+            font-size: 28px;
         }
-        .rules {
-            margin-top: 20px;
+        h2 {
+            text-align: center;
+            color: red;
+            font-size: 22px;
+        }
+        .event-title {
+            color: blue;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .bold {
+            font-weight: bold;
         }
         .dropdown {
             cursor: pointer;
@@ -32,6 +44,7 @@
             color: white;
             border-radius: 5px;
             text-align: center;
+            margin-top: 10px;
         }
         .rule-content {
             display: none;
@@ -45,45 +58,28 @@
 <body>
 
     <div class="container">
-        <h1>Code Aura – Competitive Coding Challenge</h1>
+        <h1>Tech-Symposium 2K25</h1>
+        <h2>Department of Electrical Engineering</h2>
 
-        <h2>Round 1: Code Quiz</h2>
-        <p>🔹 **Languages Covered:** C, C++, Java, Python<br>
-           🔹 **Total Marks:** 50 | **Time Limit:** 60 Minutes<br>
-           🔹 **Format:** Multiple-choice questions (MCQs) in three sessions:<br>
-           &nbsp;&nbsp;&nbsp;&nbsp; 1. Basic concepts in coding<br>
-           &nbsp;&nbsp;&nbsp;&nbsp; 2. Logical Thinking<br>
-           &nbsp;&nbsp;&nbsp;&nbsp; 3. Debugging</p>
+        <p class="event-title">EVENT No. 2: ELECTRO-HUNT</p>
+        <p><span class="bold">Rules:</span> Four participants in each team.</p>
 
-        <h2>Round 2: Pair Programming Relay</h2>
-        <p>🔹 **Language:** Only C<br>
-           🔹 **Total Marks:** 50 | **Time Limit:** 30 Minutes<br>
-           🔹 **Format:** Participants must solve **5 problem statements** within the given time.</p>
-
-        <h2>Round 3: System Design</h2>
-        <p>🔹 **Language:** Only C<br>
-           🔹 **Time Limit:** 90 Minutes<br>
-           🔹 **Format:** Teams will design a **system based on a given problem statement**.</p>
+        <p><span class="bold">Round 1:</span> Tech Word</p>
+        <p><span class="bold">Round 2:</span> Treasure Tackle</p>
 
         <div class="rules">
-            <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+            <div class="dropdown" onclick="toggleRules()">View Detailed Rules</div>
             <div class="rule-content" id="rules">
-                <p>• Each team must consist of **two participants**.<br>
-                   • In **Round 1**, each question has only one correct answer.<br>
-                   • **No negative marking**.<br>
-                   • Answers must be submitted **within the allotted time**.<br>
-                   • **Round 2 & 3** require coding in **C only**.<br>
-                   • **Use of unfair practices** (ChatGPT & Google) will lead to **disqualification**.</p>
+                <p>1. <span class="bold">Teamwork is Essential:</span> All four team members must contribute to solving clues and tasks.</p>
+                <p>2. <span class="bold">Clue Handling:</span> Teams must not share clues with other teams. If caught, they will face penalties.</p>
             </div>
         </div>
 
-        <h2>Registration</h2>
-        <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
-
-        <h3>Student Coordinators:</h3>
-        <p>📞 Pratik Uttarekars–8421661706
-<br>
-           📞 Ketan Bhilugade 7057287021</p>
+        <h3>Student Coordinator:</h3>
+        <ol>
+            <li>Pratik Uttarekar 8421661706</li>
+            <li>Ketan Bhilugade 7057287021</li>
+        </ol>
     </div>
 
     <script>
