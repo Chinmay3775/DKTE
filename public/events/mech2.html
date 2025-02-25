@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Symposium - CAD War 2k25</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .rule-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">CAD War 2k25</h1>
+        
+        <p><strong>Round 1: AutoCAD Quiz (Elimination Round)</strong></p>
+        <p><strong>Format:</strong><br>
+       🔹 15 multiple-choice and short-answer questions.<br>
+       🔹 Time Limit: 20–30 minutes.</p>
+        
+        <p><strong>Scoring</strong></p>
+        <p>🔹 Each correct answer = 1 point.<br>
+       🔹 No negative marking.</p>
+        
+        <p><strong>Rules:</strong></p>
+        <p>🔹 No use of AutoCAD software, books, or internet resources.<br>
+       🔹 Answers must be submitted within the time limit.</p>
+        
+        
+        
+        <p><strong>Round 2: 2D Drafting Challenge</strong></p>
+        <p><strong>Task:</strong><br>
+       🔹 Participants must create a detailed 2D drawing based on a given technical problem.<br>
+       🔹 Time Limit: 60 minutes.</p>
+        
+        <p><strong>Rules:</strong></p>
+        <p>🔹 Participants must complete the task using AutoCAD only.<br>
+       🔹 Use of pre-made blocks is not allowed (unless specified).<br>
+       🔹 Internet search is not allowed.</p>
+        
+        <p>Round 3: Advanced 2D/3D Design (Final Round)</p>
+        <p><strong>Task:</strong><br>
+       🔹 Participants must create either a complex 2D drawing or a 3D model based on a real-world engineering problem.<br>
+       🔹 Time Limit: 90 minutes.</p>
+        
+        <p><strong>Rules:</strong></p>
+        <p>🔹 The challenge will be revealed at the beginning of the round.<br>
+       🔹 Participants must save and submit their files in .DWG format.<br>
+       🔹 Any attempt to copy from others will lead to disqualification.</p>
+        
+        <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+        <div class="rule-content" id="rules">
+            <p>🔹 Participants must arrive on time for each round.<br>
+           🔹 The use of external USB drives or pre-saved files is not allowed.<br>
+           🔹 The judges' decision is final; no re-evaluation requests will be entertained.<br>
+           🔹 Any form of misconduct or cheating will result in immediate disqualification.</p>
+        </div>
+
+        <h2>Registration</h2>
+            <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
+            
+            <h3>Student Coordinators:</h3>
+            <p>• Chinmay Keripale – 9130091352<br>
+               • Purva Powar Patil – 9579186400</p>
+    </div>
+
+    <script>
+        
+        function toggleRules() {
+            var rules = document.getElementById("rules");
+            if (rules.style.display === "none" || rules.style.display === "") {
+                rules.style.display = "block";
+            } else {
+                rules.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

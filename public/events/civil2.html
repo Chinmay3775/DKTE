@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Symposium - CIVIL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .rules {
+            margin-top: 20px;
+        }
+        .dropdown {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .rule-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>The Survey Sprint</h1>
+
+        <h2>Team Formation</h2>
+        <p>🔹 Each team must consist of **two participants**.<br>
+           🔹 Participants must bring their own **required tools** for the Puzzle Round (e.g., scissors, glue, etc.).</p>
+
+        <h2>Round 1: Surveying Quiz</h2>
+        <p>🔹 **Quiz on basic surveying concepts**.<br>
+           🔹 **Format:** Multiple-choice questions (MCQs).<br>
+           🔹 **Time limit:** 15 minutes.<br>
+           🔹 **Top teams** based on scores will qualify for the next round.</p>
+
+        <h2>Round 2: Instrument Puzzle</h2>
+        <p>🔹 **Task:** Reassemble a **cut-up image** of an instrument/machine.<br>
+           🔹 **Time limit:** 20 minutes.<br>
+           🔹 **Tools required:** Scissors, glue, etc. (to be brought by participants).<br>
+           🔹 **Teams will be evaluated** based on accuracy & completion time.<br>
+           🔹 **Best teams** will qualify for Round 3.</p>
+
+        <h2>Round 3: Survey Treasure Hunt</h2>
+        <p>🔹 **Task:** Participants will solve clues **related to surveying**.<br>
+           🔹 Each clue **leads to the next location** within the campus.<br>
+           🔹 The **final clue** will direct teams to the last checkpoint.<br>
+           🔹 The **team that completes the challenge fastest wins**.<br>
+           🔹 **Winning teams** will be awarded the **Survey Masters title**.</p>
+
+        <div class="rules">
+            <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+            <div class="rule-content" id="rules">
+                <p>• Teams must consist of **exactly two participants**.<br>
+                   • Participants must bring their **own required tools** for the puzzle round.<br>
+                   • **Any unfair means** will result in **immediate disqualification**.<br>
+                   • Judges' decision will be final, and no objections will be entertained.</p>
+            </div>
+        </div>
+
+        <h2>Registration</h2>
+        <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
+
+        <h3>Student Coordinator:</h3>
+        <p>📞 Parth Jeevan Chavan – 8855862730</p>
+    </div>
+
+    <script>
+        function toggleRules() {
+            var rules = document.getElementById("rules");
+            if (rules.style.display === "none" || rules.style.display === "") {
+                rules.style.display = "block";
+            } else {
+                rules.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Symposium - Secret Cipher </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            text-align: center;
+        }
+        .rules {
+            margin-top: 20px;
+        }
+        .dropdown {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .rule-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <h1>Secret Cipher (Decode the Mystery!)</h1>
+            <h2>Rounds:</h2>
+            <p><strong>Round 1: Clue Chase</strong></p>
+            <p>🔹 Solve 3 cryptic clues to find hidden spots.<br></p>
+            <p><strong>Round 2: Final Hunt</strong></p>
+            <p>🔹Solve 2 final clues to find the hidden object.<br></p>
+
+            <div class="rules">
+                <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+                <div class="rule-content" id="rules">
+                    <p>1. Maximum 2 participants per team.<br>
+                       2. Judge's and organizer's decisions are final.</p>
+                </div>
+            </div>
+            
+            <h2>Registration</h2>
+            <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
+            
+            <h3>Student Coordinators:</h3>
+            <p>• Sandesh Patil : 78218 74560<br>
+                • Viraj Bele : 77680 08108
+            </p>
+        </div>
+        
+        <script>
+            function toggleRules() {
+                var rules = document.getElementById("rules");
+                if (rules.style.display === "none" || rules.style.display === "") {
+                    rules.style.display = "block";
+                } else {
+                    rules.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

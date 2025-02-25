@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Symposium - Maaticha Khel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .rule-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Maaticha Khel</h1>
+        
+        <p><strong>Team Size:</strong></p>
+        <p>🔹Individual or a team of maximum 2 participants.</p>
+        
+        <p><strong>Model Requirements</strong></p>
+        <p>🔹The models should be at a 1:24 scale.<br>
+        🔹The top 3 models will be selected based on their closeness to the reference model chosen by participants, considering aspects such as body lines, wheels, headlights, and other details.</p>
+        
+        <p><strong>Round 1: Automobile Quiz</strong></p>
+        <p><strong>Format:</strong><br>
+        🔹10 questions (1 mark each) – No negative marking.<br>
+        🔹15 questions (2 marks each) – Negative marking applies.<br>
+        🔹Cover Letter Writing (10 marks) – Participants must draft a cover letter as if they are applying to an automotive company.</p>
+        
+        <p><strong>Rules</strong></p>
+        <p>🔹Strict invigilation; use of mobile devices is prohibited.<br>
+        🔹Time Limit: 45 minutes.</p>
+        
+        <p><strong>Round 2: Clay Modelling</strong></p>
+        
+        <p><strong>Part 1: Research</strong></p>
+        <p>🔹Participants are allowed to use the internet to research car models, procedures, and tutorial videos.<br>
+        🔹They can watch YouTube videos and replicate techniques, but the final selection is based on the quality of their model.<br>
+        🔹Participants must memorize their model and modeling is to be done with no reference.<br>
+        🔹During the modeling, participants will have one chance to view their reference model for 2 minutes only.<br>
+        🔹No prior preparation is needed; participants will have dedicated time to research and develop techniques.<br>
+        🔹Time Limit: 30 minutes.</p>
+        
+        <p><strong>Part 2: Modelling</strong></p>
+        <p>🔹After research, participants must turn off their devices and start working on their clay models.<br>
+        🔹Time Limit: 1 hour 30 minutes.</p>
+        
+        <p><strong>Judging Criteria</strong></p>
+        <p>🔹Top 3 models will be selected based on their closeness to the real product and the quality of craftsmanship.</p>
+        
+        <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+        <div class="rule-content" id="rules">
+            <p>🔹Participants must arrive on time for each round.<br>
+            🔹The use of external USB drives or pre-saved files is not allowed.<br>
+            🔹The judges' decision is final; no re-evaluation requests will be entertained.<br>
+            🔹Any form of misconduct or cheating will result in immediate disqualification.</p>
+        </div>
+        <h2>Registration</h2>
+            <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
+            
+            <h3>Student Coordinators:</h3>
+            <p>• Chinmay Keripale – 9130091352<br>
+               • Purva Powar Patil – 9579186400</p>
+    </div>
+
+    <script>
+        function toggleRules() {
+            var rules = document.getElementById("rules");
+            if (rules.style.display === "none" || rules.style.display === "") {
+                rules.style.display = "block";
+            } else {
+                rules.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

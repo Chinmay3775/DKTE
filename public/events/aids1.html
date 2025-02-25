@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Symposium - Data Sprint </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            text-align: center;
+        }
+        .rules {
+            margin-top: 20px;
+        }
+        .dropdown {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .rule-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <h1>Data Sprint (AI & Data Science challenge race!)</h1>
+            <h2>Rounds:</h2>
+            <p><strong>Round 1: AI & DS Aptitude</strong></p>
+            <p>🔹AI & Data Science questions.<br></p>
+            <p><strong>Round 2: Data Duel</strong></p>
+            <p>🔹For Novice NumPy-based computations <br>
+               🔹For Expert data manipulation using Pandas.</p>
+            <p><strong>Round 3: The Analysis Arena</strong></p>
+            <p>🔹Data visualization using Matplotlib for novice & Plotly,Seaborn for expert.<br></p>
+
+            <div class="rules">
+                <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+                <div class="rule-content" id="rules">
+                    <p>1. Novice Group : FY, SY & Diploma students.<br>
+                        2. Expert Group : TY & Final Year students.<br>
+                        3. Only individual participation is allowed.<br>
+                        4. All hints will be provided in a single Jupyter.</p>
+                </div>
+            </div>
+            
+            <h2>Registration</h2>
+            <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
+            
+            <h3>Student Coordinators:</h3>
+            <p>• Divya Patil : 70283 45994  (Novice Group)<br>
+               • Bhagyashree Chitruk : 86688 15724  (Expert Group)
+            </p>
+        </div>
+        
+        <script>
+            function toggleRules() {
+                var rules = document.getElementById("rules");
+                if (rules.style.display === "none" || rules.style.display === "") {
+                    rules.style.display = "block";
+                } else {
+                    rules.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
