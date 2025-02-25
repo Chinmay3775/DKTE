@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Symposium - Battle Bots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .rules {
+            margin-top: 20px;
+        }
+        .dropdown {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .rule-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Battle Bots – Autonomous Racing Challenge</h1>
+        
+        <h2>Round 1: The Qualifier</h2>
+        <p>🔹 The track features circular curves to test robot maneuverability.<br>
+           🔹 Checkpoints grant points upon successful crossings.<br>
+           🔹 Top 8 teams advance to the next stage.</p>
+
+        <h2>Round 2: The Ultimate Challenge</h2>
+        <p>🔹 A more complex track with ramps, obstacles, and 10-degree inclinations.<br>
+           🔹 The track includes sharp 90° turns and various angles to test adaptability.<br>
+           🔹 Checkpoints available for additional points.</p>
+
+        <div class="rules">
+            <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+            <div class="rule-content" id="rules">
+                <p>• The robot must be fully autonomous and pose no danger.<br>
+                   • Maximum 4 members per team.<br>
+                   • No external connections allowed during the race.<br>
+                   • Only the team leader can handle the robot during the competition.<br>
+                   • Robots must start only with organizer approval.<br>
+                   • No modifications allowed during the event.<br>
+                   • If a robot moves out of bounds, it must restart from the nearest checkpoint.<br>
+                   • Each team gets 3 restarts per round (with time penalties).<br>
+                   • The robot must complete the track within the given time limit.<br>
+                   • Track width: 2 cm | Robot dimensions: max 20x20x20 cm.</p>
+            </div>
+        </div>
+
+        <h2>Registration</h2>
+        <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
+
+        <h3>Student Coordinators:</h3>
+        <p>📞 Vaishnavi Pawar – 8446003515<br>
+           📞 Vishwajeet Patil – 7038823784</p>
+    </div>
+
+    <script>
+        function toggleRules() {
+            var rules = document.getElementById("rules");
+            if (rules.style.display === "none" || rules.style.display === "") {
+                rules.style.display = "block";
+            } else {
+                rules.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
