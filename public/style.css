@@ -695,6 +695,7 @@ li span {
   border-radius: 15px;
   font-weight:bold;
   box-shadow: 0 20px 40px rgba(49, 106, 187, 0.5);
+  
 }
 .events .container .card .face {
   position: absolute;
