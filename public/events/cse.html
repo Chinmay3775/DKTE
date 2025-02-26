@@ -23,7 +23,7 @@
         h1, h2, h3 {
             text-align: center;
         }
-        .rules, .rounds, .coordinators {
+        .rounds, .coordinators {
             margin-top: 20px;
         }
         ul {
@@ -42,7 +42,33 @@
             cursor: pointer;
             text-decoration: none;
         }
+        .dropdown {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .dropdown button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function toggleDropdown() {
+            var content = document.getElementById("rules-content");
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -51,15 +77,6 @@
         
         <p>Get ready to put your coding skills to the test! Compete in three intense rounds, solve exciting challenges, and climb the live leaderboard to claim the coding champion title!</p>
         
-        <section class="rules">
-            <h3>Rules & Participation:</h3>
-            <ul>
-                <li>Max 2 participants per team.</li>
-                <li>Open to all year students (Novice: Diploma, F.Y., S.Y. | Expert: T.Y., Final Year).</li>
-                <li>Any programming language allowed.</li>
-            </ul>
-        </section>
-
         <section class="rounds">
             <h3>Competition Rounds:</h3>
             <h4>Round 1: Logic Leagues</h4>
@@ -87,15 +104,15 @@
             <p><strong>Final winner = Total leaderboard score from all rounds!</strong></p>
         </section>
 
-        <section class="why-participate">
-            <h3>Why Participate?</h3>
-            <ul>
-                <li>Sharpen coding skills</li>
-                <li>Live leaderboard excitement</li>
-                <li>Prizes & certificates</li>
-                <li>Network with tech enthusiasts</li>
-                <li>Ultimate bragging rights!</li>
-            </ul>
+        <section class="dropdown">
+            <button onclick="toggleDropdown()">Rules & Regulations</button>
+            <div id="rules-content" class="dropdown-content">
+                <ul>
+                    <li>Max 2 participants per team.</li>
+                    <li>Open to all year students (Novice: Diploma, F.Y., S.Y. | Expert: T.Y., Final Year).</li>
+                    <li>Any programming language allowed.</li>
+                </ul>
+            </div>
         </section>
 
         <section class="coordinators">
