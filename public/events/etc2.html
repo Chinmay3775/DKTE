@@ -11,20 +11,35 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 60%;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
         }
-        h1, h2 {
+
+        h1{
             text-align: center;
         }
-        .rules {
-            margin-top: 20px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .dropdown {
             cursor: pointer;
             padding: 10px;
@@ -32,13 +47,24 @@
             color: white;
             border-radius: 5px;
             text-align: center;
+            margin-top: 20px;
         }
+
         .rule-content {
             display: none;
             padding: 10px;
             background: #e9ecef;
             border-radius: 5px;
             margin-top: 5px;
+            text-align: left;
+        }
+
+        .center-text {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
         }
     </style>
 </head>

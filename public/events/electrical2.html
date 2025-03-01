@@ -11,32 +11,35 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 60%;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
         }
-        h1 {
+
+        h1{
             text-align: center;
-            color: #d18126;
-            font-size: 28px;
         }
-        h2 {
-            text-align: center;
-            color: red;
-            font-size: 22px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .event-title {
-            color: blue;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .bold {
-            font-weight: bold;
-        }
+
         .dropdown {
             cursor: pointer;
             padding: 10px;
@@ -44,24 +47,33 @@
             color: white;
             border-radius: 5px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 20px;
         }
+
         .rule-content {
             display: none;
             padding: 10px;
             background: #e9ecef;
             border-radius: 5px;
             margin-top: 5px;
+            text-align: left;
         }
+
+        .center-text {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Tech-Symposium 2K25</h1>
-        <h2>Department of Electrical Engineering</h2>
 
-        <p class="event-title">EVENT No. 2: ELECTRO-HUNT</p>
+        <h1 > ELECTRO-HUNT</h1>
         <p><span class="bold">Rules:</span> Four participants in each team.</p>
 
         <p><span class="bold">Round 1:</span> Tech Word</p>
@@ -77,8 +89,8 @@
 
         <h3>Student Coordinator:</h3>
         <ol>
-            <li>Pratik Uttarekar 8421661706</li>
-            <li>Ketan Bhilugade 7057287021</li>
+            <li>📞 Pratik Uttarekar: <a href="tel:8421661706"> 8421661706</a></li>
+            <li>📞 Ketan Bhilugade:<a href="tel:7057287021"> 7057287021</a></li>
         </ol>
     </div>
 

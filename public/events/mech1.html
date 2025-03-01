@@ -11,14 +11,35 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 60%;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
         }
+
+        h1{
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .dropdown {
             cursor: pointer;
             padding: 10px;
@@ -28,12 +49,22 @@
             text-align: center;
             margin-top: 20px;
         }
+
         .rule-content {
             display: none;
             padding: 10px;
             background: #e9ecef;
             border-radius: 5px;
             margin-top: 5px;
+            text-align: left;
+        }
+
+        .center-text {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
         }
     </style>
 </head>
@@ -41,24 +72,24 @@
     <div class="container">
         <h1 style="text-align: center;">Maaticha Khel</h1>
         
-        <p><strong>Team Size:</strong></p>
+        <h2><strong>Team Size:</strong></h2>
         <p>🔹Individual or a team of maximum 2 participants.</p>
         
-        <p><strong>Model Requirements</strong></p>
+        <h2><strong>Model Requirements</strong></h2>
         <p>🔹The models should be at a 1:24 scale.<br>
         🔹The top 3 models will be selected based on their closeness to the reference model chosen by participants, considering aspects such as body lines, wheels, headlights, and other details.</p>
         
-        <p><strong>Round 1: Automobile Quiz</strong></p>
+        <h2><strong>Round 1: Automobile Quiz</strong></h2>
         <p><strong>Format:</strong><br>
         🔹10 questions (1 mark each) – No negative marking.<br>
         🔹15 questions (2 marks each) – Negative marking applies.<br>
         🔹Cover Letter Writing (10 marks) – Participants must draft a cover letter as if they are applying to an automotive company.</p>
         
-        <p><strong>Rules</strong></p>
+        <h2><strong>Rules</strong></h2>
         <p>🔹Strict invigilation; use of mobile devices is prohibited.<br>
         🔹Time Limit: 45 minutes.</p>
         
-        <p><strong>Round 2: Clay Modelling</strong></p>
+        <h2><strong>Round 2: Clay Modelling</strong></h2>
         
         <p><strong>Part 1: Research</strong></p>
         <p>🔹Participants are allowed to use the internet to research car models, procedures, and tutorial videos.<br>
@@ -72,7 +103,7 @@
         <p>🔹After research, participants must turn off their devices and start working on their clay models.<br>
         🔹Time Limit: 1 hour 30 minutes.</p>
         
-        <p><strong>Judging Criteria</strong></p>
+        <h2><strong>Judging Criteria</strong></h2>
         <p>🔹Top 3 models will be selected based on their closeness to the real product and the quality of craftsmanship.</p>
         
         <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
@@ -86,7 +117,7 @@
             <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
             
             <h3>Student Coordinators:</h3>
-            <p>• Tanay Vayangankar – 9175425405<br>
+            <p>📞 Tanay Vayangankar: <a href="tel:9175425405"> 9175425405</a><br>
     </div>
 
     <script>

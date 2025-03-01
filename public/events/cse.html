@@ -9,58 +9,54 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 60%;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
+        }
+
+        h1{
             text-align: center;
         }
-        h1, h2, h3 {
-            text-align: center;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .rounds, .coordinators {
-            margin-top: 20px;
-        }
-        ul {
-            margin-left: 20px;
-            text-align: left;
-        }
-        .register-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
+
         .dropdown {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .dropdown-content {
-            display: none;
-            background-color: white;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .dropdown button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
             cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .rule-content {
+            display: none;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+            text-align: left;
         }
     </style>
     <script>
@@ -74,57 +70,46 @@
     <div class="container">
         <h1>Tech Symposium 2K25</h1>
         <h2>The Tech Nova 2.0 - Coding Competition</h2>
-        
         <p>Get ready to put your coding skills to the test! Compete in three intense rounds, solve exciting challenges, and climb the live leaderboard to claim the coding champion title!</p>
         
-        <section class="rounds">
-            <h3>Competition Rounds:</h3>
-            <h4>Round 1: Logic Leagues</h4>
-            <p>A coding quiz to test fundamental logic & problem-solving skills.</p>
-            <ul>
-                <li>Bonus Round: Solve rapid-fire logic puzzles for extra points.</li>
-                <li>Double or Nothing: Take a risk for a high-stakes question to boost your score!</li>
-            </ul>
-            <p><strong>Top teams advance to the next round!</strong></p>
-
-            <h4>Round 2: Code Cleanse Challenge</h4>
-            <p>A debugging battle where teams fix faulty code snippets.</p>
-            <ul>
-                <li>Time-Based Streak Bonus: Fix multiple bugs in time for extra points.</li>
-                <li>Code Chaos Twist: Get a hint but lose points.</li>
-                <li>Swap Bug Option: Swap a bug with another for a fresh challenge (2 chances).</li>
-            </ul>
-            <p><strong>Only the best debuggers move forward!</strong></p>
-
-            <h4>Round 3: Pro Solver's Paradise</h4>
-            <p>A coding contest featuring challenging problems that require optimization.</p>
-            <ul>
-                <li>Double Points Mode: Use twice to double rewards (or risk losing the same amount).</li>
-            </ul>
-            <p><strong>Final winner = Total leaderboard score from all rounds!</strong></p>
-        </section>
-
-        <section class="dropdown">
-            <button onclick="toggleDropdown()">Rules & Regulations</button>
-            <div id="rules-content" class="dropdown-content">
-                <ul>
-                    <li>Max 2 participants per team.</li>
-                    <li>Open to all year students (Novice: Diploma, F.Y., S.Y. | Expert: T.Y., Final Year).</li>
-                    <li>Any programming language allowed.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="coordinators">
-            <h3>Student Coordinators:</h3>
-            <ul>
-                <li>Expert: Sahil (9579891114), Shreyash (9850541839)</li>
-                <li>Novice: Diksha (7249692279), Neeraj (9322696345), Shirisha (9420635772)</li>
-            </ul>
-        </section>
-
+        <h2>Competition Rounds:</h2>
+        <h2>Round 1: Logic Leagues</h2>
+        <p>A coding quiz to test fundamental logic & problem-solving skills.</p>
+        <ul>
+            <li>Bonus Round: Solve rapid-fire logic puzzles for extra points.</li>
+            <li>Double or Nothing: Take a risk for a high-stakes question to boost your score!</li>
+        </ul>
+        <p><strong>Top teams advance to the next round!</strong></p>
+        
+        <h2>Round 2: Code Cleanse Challenge</h2>
+        <p>A debugging battle where teams fix faulty code snippets.</p>
+        <ul>
+            <li>Time-Based Streak Bonus: Fix multiple bugs in time for extra points.</li>
+            <li>Code Chaos Twist: Get a hint but lose points.</li>
+            <li>Swap Bug Option: Swap a bug with another for a fresh challenge (2 chances).</li>
+        </ul>
+        <p><strong>Only the best debuggers move forward!</strong></p>
+        
+        <h2>Round 3: Pro Solver's Paradise</h2>
+        <p>A coding contest featuring challenging problems that require optimization.</p>
+        <ul>
+            <li>Double Points Mode: Use twice to double rewards (or risk losing the same amount).</li>
+        </ul>
+        <p><strong>Final winner = Total leaderboard score from all rounds!</strong></p>
+        
+        <div class="dropdown" onclick="toggleDropdown()">View Rules & Regulations</div>
+        <div id="rules-content" class="rule-content">
+            <p>• Max 2 participants per team.<br>
+               • Open to all year students (Novice: Diploma, F.Y., S.Y. | Expert: T.Y., Final Year).<br>
+               • Any programming language allowed.</p>
+        </div>
+        
+        <h3>Student Coordinators:</h3>
+        <p>📞 Expert- Sahil:<a href="tel:9579891114"> 9579891114</a>,Shreyash:<a href="tel:9850541839" >9850541839</a></p>
+        <p>📞 Novice: Diksha:<a href="tel:7249692279"> 7249692279</a>Neeraj:<a href="tel:9322696345">9322696345</a>, Shirisha:<a href="tel:9420635772">9420635772</a></p>
+        
         <h3>Register now & join the ultimate coding battle!</h3>
-        <a href="https://forms.gle/your-google-form-link" class="register-button" target="_blank">Register Now</a>
+        <p><a href="https://forms.gle/your-google-form-link" target="_blank">Register Now</a></p>
     </div>
 </body>
 </html>

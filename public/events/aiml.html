@@ -5,26 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Symposium - I&AI 2.0 </title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 60%;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
         }
-        h1, h2 {
+
+        h1{
             text-align: center;
         }
-        .rules {
-            margin-top: 20px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .dropdown {
             cursor: pointer;
             padding: 10px;
@@ -32,14 +47,27 @@
             color: white;
             border-radius: 5px;
             text-align: center;
+            margin-top: 20px;
         }
+
         .rule-content {
             display: none;
             padding: 10px;
             background: #e9ecef;
             border-radius: 5px;
             margin-top: 5px;
+            text-align: left;
         }
+
+        .center-text {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+
     </style>
 </head>
 <body>
@@ -84,8 +112,8 @@
             <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
             
             <h3>Student Coordinators:</h3>
-            <p>• Chinmay Keripale – 9130091352<br>
-               • Purva Powar Patil – 9579186400</p>
+            <p>📞 Chinmay Keripale: <a href="9130091352"> 9130091352</a><br>
+               📞 Purva Powar Patil: <a href="9579186400"> 9579186400</a></p>
         </div>
         
         <script>

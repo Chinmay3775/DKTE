@@ -11,20 +11,35 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 60%;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
         }
-        h1, h2 {
+
+        h1{
             text-align: center;
         }
-        .rules {
-            margin-top: 20px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .dropdown {
             cursor: pointer;
             padding: 10px;
@@ -32,14 +47,26 @@
             color: white;
             border-radius: 5px;
             text-align: center;
+            margin-top: 20px;
         }
+
         .rule-content {
             display: none;
             padding: 10px;
             background: #e9ecef;
             border-radius: 5px;
             margin-top: 5px;
+            text-align: left;
         }
+
+        .center-text {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -48,20 +75,20 @@
         <h1>CADONOVA: Crafting Dreams into the Digital Canvas</h1>
 
         <h2>Round 1: Quiz</h2>
-        <p>🔹 Quiz based on **basic knowledge of CAD & Building Planning and Drawing**.<br>
+        <p>🔹 Quiz based on basic knowledge of CAD & Building Planning and Drawing.<br>
            🔹 Shortlisted participants will move to the next round.</p>
 
         <h2>Round 2: Planning and Drawing</h2>
-        <p>🔹 **Task:** Planning and drawing using **AutoCAD**.<br>
-           🔹 **Problem statements** will be provided on the spot.<br>
-           🔹 **Judges' decision is final**.</p>
+        <p>🔹 Task: Planning and drawing using AutoCAD.<br>
+           🔹 Problem statements** will be provided on the spot.<br>
+           🔹 Judges' decision is final.</p>
 
         <div class="rules">
             <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
             <div class="rule-content" id="rules">
-                <p>• Participants must follow the **AutoCAD guidelines** provided.<br>
-                   • The **judge’s decision is final**, and no disputes will be entertained.<br>
-                   • Any **misconduct or unfair practice** will lead to disqualification.</p>
+                <p>• Participants must follow the AutoCAD guidelines provided.<br>
+                   • The judge’s decision is final, and no disputes will be entertained.<br>
+                   • Any misconduct or unfair practice will lead to disqualification.</p>
             </div>
         </div>
 
@@ -69,7 +96,7 @@
         <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
 
         <h3>Student Coordinator:</h3>
-        <p>📞 Adinath Pujari – 9860858941</p>
+        <p>📞 Adinath Pujari: <a href="9860858941">9860858941</a> </p>
     </div>
 
     <script>

@@ -11,20 +11,35 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 60%;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
         }
-        h1, h2 {
+
+        h1{
             text-align: center;
         }
-        .rules {
-            margin-top: 20px;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .dropdown {
             cursor: pointer;
             padding: 10px;
@@ -32,14 +47,26 @@
             color: white;
             border-radius: 5px;
             text-align: center;
+            margin-top: 20px;
         }
+
         .rule-content {
             display: none;
             padding: 10px;
             background: #e9ecef;
             border-radius: 5px;
             margin-top: 5px;
+            text-align: left;
         }
+
+        .center-text {
+            font-weight: bold;
+            font-size: 18px;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -48,35 +75,35 @@
         <h1>The Survey Sprint</h1>
 
         <h2>Team Formation</h2>
-        <p>🔹 Each team must consist of **two participants**.<br>
-           🔹 Participants must bring their own **required tools** for the Puzzle Round (e.g., scissors, glue, etc.).</p>
+        <p>🔹 Each team must consist of two participants.<br>
+           🔹 Participants must bring their own required tools for the Puzzle Round (e.g., scissors, glue, etc.).</p>
 
         <h2>Round 1: Surveying Quiz</h2>
-        <p>🔹 **Quiz on basic surveying concepts**.<br>
-           🔹 **Format:** Multiple-choice questions (MCQs).<br>
-           🔹 **Time limit:** 15 minutes.<br>
-           🔹 **Top teams** based on scores will qualify for the next round.</p>
+        <p>🔹 Quiz on basic surveying concepts.<br>
+           🔹 Format: Multiple-choice questions (MCQs).<br>
+           🔹 Time limit: 15 minutes.<br>
+           🔹 Top teams based on scores will qualify for the next round.</p>
 
         <h2>Round 2: Instrument Puzzle</h2>
-        <p>🔹 **Task:** Reassemble a **cut-up image** of an instrument/machine.<br>
-           🔹 **Time limit:** 20 minutes.<br>
-           🔹 **Tools required:** Scissors, glue, etc. (to be brought by participants).<br>
-           🔹 **Teams will be evaluated** based on accuracy & completion time.<br>
-           🔹 **Best teams** will qualify for Round 3.</p>
+        <p>🔹 Task: Reassemble a cut-up imag of an instrument/machine.<br>
+           🔹 Time limit: 20 minutes.<br>
+           🔹 Tools required: Scissors, glue, etc. (to be brought by participants).<br>
+           🔹 Teams will be evaluated based on accuracy & completion time.<br>
+           🔹 Best teams will qualify for Round 3.</p>
 
         <h2>Round 3: Survey Treasure Hunt</h2>
-        <p>🔹 **Task:** Participants will solve clues **related to surveying**.<br>
-           🔹 Each clue **leads to the next location** within the campus.<br>
-           🔹 The **final clue** will direct teams to the last checkpoint.<br>
-           🔹 The **team that completes the challenge fastest wins**.<br>
-           🔹 **Winning teams** will be awarded the **Survey Masters title**.</p>
+        <p>🔹Task Participants will solve cluesrelated to surveyin.<br>
+           🔹 Each clueleads to the next locatio within the campus.<br>
+           🔹 Thefinal clu will direct teams to the last checkpoint.<br>
+           🔹 Theteam that completes the challenge fastest win.<br>
+           🔹Winning team will be awarded theSurvey Masters titl.</p>
 
         <div class="rules">
             <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
             <div class="rule-content" id="rules">
-                <p>• Teams must consist of **exactly two participants**.<br>
-                   • Participants must bring their **own required tools** for the puzzle round.<br>
-                   • **Any unfair means** will result in **immediate disqualification**.<br>
+                <p>• Teams must consist ofexactly two participant.<br>
+                   • Participants must bring theirown required tool for the puzzle round.<br>
+                   •Any unfair mean will result inimmediate disqualificatio.<br>
                    • Judges' decision will be final, and no objections will be entertained.</p>
             </div>
         </div>
@@ -85,7 +112,7 @@
         <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
 
         <h3>Student Coordinator:</h3>
-        <p>📞 Parth Jeevan Chavan – 8855862730</p>
+        <p>📞 Parth Jeevan Chavan : <a href="8855862730"> 8855862730</a> </p>
     </div>
 
     <script>
