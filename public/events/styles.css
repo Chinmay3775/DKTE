@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: Arial, sans-serif;
+}
+canvas {
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind other content */
+    pointer-events: none; /* Allow interaction with content beneath */
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(36, 51, 74, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    animation: fadeIn 1.5s forwards;
+    transition: background 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
+}
+.container:hover {
+    box-shadow: 0 0px 30px #7ec4e3;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00d9ff;
+    margin-bottom: 20px;
+}
+
+li{
+    color: white;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 20px;
+    color: #f39c12;
+    text-shadow: 0 0 0 #f39c12; /* Added subtle shadow */
+}
+
+h3{
+    color: #f39c12;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: white;
+}
+
+a {
+    color: #00d9ff;
+    text-decoration: underline;
+}
+
+.rules {
+    margin-top: 20px;
+}
+
+.dropdown {
+    cursor: pointer;
+    background: #00d9ff;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0px 10px rgba(0, 217, 255, 0.5);
+}
+
+.rule-content {
+    display: none;
+    background: rgba(18, 17, 32, 0.748);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.coordinators {
+    margin-top: 20px;
+}
+
+.coordinators p {
+    margin: 5px 0;
+}
+
+.coordinators a {
+    color: #f39c12;
+}
+/* Center the button container */
+.button-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100px; /* Set a fixed height for the container (optional) */
+}
+
+.register-button {
+    display: inline-block;
+    padding: 12px 24px; /* Adjust padding for size */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: #000000; /* Text color */
+    background-color: #00d9ff; /* Button background color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid transparent; /* Optional: Add border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transitions */
+    text-align: center;
+}
+
+.register-button:hover {
+    background-color: #00aaff; /* Darker shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+.register-button:active {
+    transform: translateY(0); /* Reset position when clicked */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+}
