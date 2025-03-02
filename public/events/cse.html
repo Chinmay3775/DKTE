@@ -5,69 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Symposium 2K25 - The Tech Nova 2.0</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        .container {
-            max-width: 60%;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeIn 1.5s forwards;
-        }
-
-        h1{
-            text-align: center;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .dropdown {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .rule-content {
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-            margin-top: 5px;
-            text-align: left;
-        }
-    </style>
-    <script>
-        function toggleDropdown() {
-            var content = document.getElementById("rules-content");
-            content.style.display = content.style.display === "none" ? "block" : "none";
-        }
-    </script>
+    <script src="script.js"></script>
 </head>
 <body>
+    <canvas id="techCanvas"></canvas>
+    <script src="script.js"></script>
     <div class="container">
         <h1>Tech Symposium 2K25</h1>
         <h2>The Tech Nova 2.0 - Coding Competition</h2>
@@ -97,20 +41,24 @@
             <li>Double Points Mode: Use twice to double rewards (or risk losing the same amount).</li>
         </ul>
         <p><strong>Final winner = Total leaderboard score from all rounds!</strong></p>
-        
-        <div class="dropdown" onclick="toggleDropdown()">View Rules & Regulations</div>
-        <div id="rules-content" class="rule-content">
-            <p>• Max 2 participants per team.<br>
-               • Open to all year students (Novice: Diploma, F.Y., S.Y. | Expert: T.Y., Final Year).<br>
-               • Any programming language allowed.</p>
+                
+        <div class="rules">
+            <div class="dropdown" onclick="toggleRules()">View Rules & Regulations</div>
+            <div class="rule-content" id="rules">
+                <p>• Max 2 participants per team.<br>
+                    • Open to all year students (Novice: Diploma, F.Y., S.Y. | Expert: T.Y., Final Year).<br>
+                    • Any programming language allowed.</p>
+            </div>
         </div>
+
         
         <h3>Student Coordinators:</h3>
-        <p>📞 Expert- Sahil:<a href="tel:9579891114"> 9579891114</a>,Shreyash:<a href="tel:9850541839" >9850541839</a></p>
-        <p>📞 Novice: Diksha:<a href="tel:7249692279"> 7249692279</a>Neeraj:<a href="tel:9322696345">9322696345</a>, Shirisha:<a href="tel:9420635772">9420635772</a></p>
+        <p>📞 Expert- Sahil:<a href="tel:9579891114"> 9579891114</a>, Shreyash:<a href="tel:9850541839" >9850541839</a></p>
+        <p>📞 Novice: Diksha:<a href="tel:7249692279"> 7249692279</a>, Neeraj:<a href="tel:9322696345">9322696345</a>, Shirisha:<a href="tel:9420635772">9420635772</a></p>
         
-        <h3>Register now & join the ultimate coding battle!</h3>
-        <p><a href="https://forms.gle/your-google-form-link" target="_blank">Register Now</a></p>
+        <div class="button-container">
+            <a href="https://forms.gle/ZQ3uKn3zpQQxaHBh9" class="register-button">Register Now</a>
+        </div>
     </div>
 </body>
 </html>
