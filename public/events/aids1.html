@@ -5,72 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Symposium - Data Sprint </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        .container {
-            max-width: 60%;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeIn 1.5s forwards;
-        }
-
-        h1{
-            text-align: center;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .dropdown {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .rule-content {
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-            margin-top: 5px;
-            text-align: left;
-        }
-
-        .center-text {
-            font-weight: bold;
-            font-size: 18px;
-            display: block;
-            margin: 10px auto;
-            text-align: center;
-        }
-
-    </style>
 </head>
 <body>
+    <canvas id="techCanvas"></canvas>
+    <script src="script.js"></script>
         <div class="container">
             <h1>Data Sprint (AI & Data Science challenge race!)</h1>
             <h2>Rounds:</h2>
@@ -92,25 +32,17 @@
                         4. All hints will be provided in a single Jupyter.</p>
                 </div>
             </div>
-            
-            <h2>Registration</h2>
-            <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
-            
             <h3>Student Coordinators:</h3>
             <p>📞 Divya Patil : <a href="tel:70283 45994"> 70283 45994</a>   (Novice Group)<br>
                📞 Bhagyashree Chitruk : <a href="tel:86688 15724"> 86688 15724</a>   (Expert Group)
             </p>
+            <div class="button-container">
+                <a href="https://forms.gle/ZQ3uKn3zpQQxaHBh9" class="register-button">Register Now</a>
+            </div>
         </div>
         
-        <script>
-            function toggleRules() {
-                var rules = document.getElementById("rules");
-                if (rules.style.display === "none" || rules.style.display === "") {
-                    rules.style.display = "block";
-                } else {
-                    rules.style.display = "none";
-                }
-            }
-        </script>
+        
+        
+        <script src="script.js"></script>
     </body>
 </html>
