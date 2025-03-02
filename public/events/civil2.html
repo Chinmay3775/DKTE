@@ -5,73 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Symposium - CIVIL</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        .container {
-            max-width: 60%;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeIn 1.5s forwards;
-        }
-
-        h1{
-            text-align: center;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .dropdown {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .rule-content {
-            display: none;
-            padding: 10px;
-            background: #e9ecef;
-            border-radius: 5px;
-            margin-top: 5px;
-            text-align: left;
-        }
-
-        .center-text {
-            font-weight: bold;
-            font-size: 18px;
-            display: block;
-            margin: 10px auto;
-            text-align: center;
-        }
-
-    </style>
 </head>
 <body>
-
+    <canvas id="techCanvas"></canvas>
+    <script src="script.js"></script>
     <div class="container">
         <h1>The Survey Sprint</h1>
 
@@ -109,23 +48,15 @@
             </div>
         </div>
 
-        <h2>Registration</h2>
-        <p>Register now: <a href="#" id="google-form">[Google Form Link Here]</a></p>
-
+        
         <h3>Student Coordinator:</h3>
-        <p>📞 Parth Jeevan Chavan : <a href="8855862730"> 8855862730</a> </p>
+        <p>📞 Parth Jeevan Chavan : <a href="tel:8855862730"> 8855862730</a> </p>
+        <div class="button-container">
+            <a href="https://forms.gle/ZQ3uKn3zpQQxaHBh9" class="register-button">Register Now</a>
+        </div>
     </div>
 
-    <script>
-        function toggleRules() {
-            var rules = document.getElementById("rules");
-            if (rules.style.display === "none" || rules.style.display === "") {
-                rules.style.display = "block";
-            } else {
-                rules.style.display = "none";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
