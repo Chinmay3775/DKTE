@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>TECH SYMPOSIUM 2K25</title>
   <link rel="icon" type="image/x-icon" href="https://tech-symposium-2025.web.app/logo.png">
@@ -8,13 +9,63 @@
   <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <audio id="audio" style="display: none;" width="0px" height="0" allow="autoplay" autoplay="autoplay" src="./bg.mp3">If stream does not start automatically press the play button</audio>
-  
+  <!-- Interactive Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const particlesGeometry = new THREE.BufferGeometry();
+    const particlesCount = 3500;
+
+    const posArray = new Float32Array(particlesCount * 3);
+
+    for (let i = 0; i < particlesCount * 3; i++) {
+      posArray[i] = (Math.random() - 0.5) * 10;
+    }
+
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+    const material = new THREE.PointsMaterial({
+      size: 0.02,
+      color: 0x00d9ff
+    });
+
+    const particlesMesh = new THREE.Points(particlesGeometry, material);
+    scene.add(particlesMesh);
+
+    camera.position.z = 2;
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      particlesMesh.rotation.x += 0.001;
+      particlesMesh.rotation.y += 0.001;
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+
+  <audio id="audio" style="display: none;" width="0px" height="0" allow="autoplay" autoplay="autoplay" src="./bg.mp3">If
+    stream does not start automatically press the play button</audio>
+
   <section id="home">
     <div class="navbar">
       <ul>
@@ -31,9 +82,9 @@
         </div>
       </div>
     </div>
-   
+
     <div class="container scale-up-center">
-        <!-- <div class="logo-container">
+      <!-- <div class="logo-container">
             <img src="dkte.png" alt="DKTE Logo" class="college-logo">
           </div> -->
       <h1 id="heading">
@@ -41,7 +92,7 @@
         <span class="presents"><strong>presents</strong></span>
         <span class="text-flicker-in-glow">Tech symposium 2K25</span>
       </h1>
-      
+
       <div class="time shake-horizontal">
         <h1 id="headline">Starts in</h1>
         <div id="countdown">
@@ -56,7 +107,7 @@
           <span>MARCH 15</span>
         </div>
       </div>
-      
+
       <div class="bounce-top" id="eventlist">
         <a href="#events" id="eventref">
           <img src="https://techsymposium-dkte.web.app/down.svg" alt="" srcset="">
@@ -64,158 +115,160 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Replace the existing events section with this code -->
-<section id="events" class="events">
-  <div class="container">
-    <div class="card">
-      <div class="face face1">
-        <div class="content">
-          <span class="stars"></span>
-          <div class="dept-header">Computer Science & Engineering</div>
-          <h1 class="event">Events</h1>
-          <h2 class="event">TECH NOVA 2.0<br>Forged in Challenge</h2>
-          <ul>
-            <li>NOVICE</li>
-            <li>EXPERT</li>
-          </ul>
-          <button onclick="window.location.href='events/cse.html'">EXPLORE EVENT</button>
-          <p class="event">EXCITING PRIZE MONEY</p>
+  <section id="events" class="events">
+    <div class="container">
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+            <div class="dept-header">Computer Science & Engineering</div>
+            <h1 class="event">Events</h1>
+            <h2 class="event">TECH NOVA 2.0<br>Forged in Challenge</h2>
+            <ul>
+              <li>NOVICE</li>
+              <li>EXPERT</li>
+            </ul>
+            <button onclick="window.location.href='events/cse.html'">EXPLORE EVENT</button>
+            <p class="event">EXCITING PRIZE MONEY</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>CSE</h2>
         </div>
       </div>
-      <div class="face face2">
-        <h2>CSE</h2>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="face face1">
-        <center>
-        <div class="content">
-          <span class="stars"></span>
-          <div class="dept-header">Computer Science & Engineering (AI-ML)</div>
-          <h1 class="event">Events</h1>
-          <h2 class="event">I&AI 2.0<br>Hand AI Competition</h2>
-          <ul>
-            <li>NOVICE</li>
-            <li>EXPERT</li>
-          </ul>
-          <button onclick="window.location.href='events/aiml.html'">EXPLORE EVENT</button>
-          <p class="event">EXCITING PRIZE MONEY</p>
+      <div class="card">
+        <div class="face face1">
+          <center>
+            <div class="content">
+              <span class="stars"></span>
+              <div class="dept-header">Computer Science & Engineering (AI-ML)</div>
+              <h1 class="event">Events</h1>
+              <h2 class="event">I&AI 2.0<br>Hand AI Competition</h2>
+              <ul>
+                <li>NOVICE</li>
+                <li>EXPERT</li>
+              </ul>
+              <button onclick="window.location.href='events/aiml.html'">EXPLORE EVENT</button>
+              <p class="event">EXCITING PRIZE MONEY</p>
+            </div>
+          </center>
         </div>
-      </center>
+        <div class="face face2">
+          <h2>CSE(AI-ML)</h2>
+        </div>
       </div>
-      <div class="face face2">
-        <h2>CSE(AI-ML)</h2>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="face face1">
-        <div class="content" style="padding-top: 60px;">
-          <span class="stars"></span>
-          <div class="dept-header" >Computer Science & Engineering (AI-DS)</div>
-          <h1 class="event">Events</h1>
-          
+      <div class="card">
+        <div class="face face1">
+          <div class="content" style="padding-top: 60px;">
+            <span class="stars"></span>
+            <div class="dept-header">Computer Science & Engineering (AI-DS)</div>
+            <h1 class="event">Events</h1>
+
             <h2 class="event">1. DATA SPRINT</h2>
             <button onclick="window.location.href='events/aids1.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
-          
-          
+
+
             <h2 class="event">2. SECRET CIPER</h2>
             <button onclick="window.location.href='events/aids2.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
-          
+
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>CSE(AI-DS)</h2>
         </div>
       </div>
-      <div class="face face2">
-        <h2>CSE(AI-DS)</h2>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="face face1">
-        <center>
-        <div class="content" style="padding-top: 50px;">
-          <span class="stars"></span>
-          <div class="dept-header">Civil Engineering</div>
-          <h1 class="event">Events</h1>
-            <h2 class="event">1. CADONOVA<br></h2> <h3>Crafting Dreams into the Digital Canvas</h3>
-            <button onclick="window.location.href='events/civil1.html'">EXPLORE EVENT</button>
-            <p class="event">EXCITING PRIZE MONEY</p>
-            <h2 class="event">2. The Survey Sprint</h2>
-            <button onclick="window.location.href='events/civil2.html'">EXPLORE EVENT</button>
-            <p class="event">EXCITING PRIZE MONEY</p>
+      <div class="card">
+        <div class="face face1">
+          <center>
+            <div class="content" style="padding-top: 50px;">
+              <span class="stars"></span>
+              <div class="dept-header">Civil Engineering</div>
+              <h1 class="event">Events</h1>
+              <h2 class="event">1. CADONOVA<br></h2>
+              <h3>Crafting Dreams into the Digital Canvas</h3>
+              <button onclick="window.location.href='events/civil1.html'">EXPLORE EVENT</button>
+              <p class="event">EXCITING PRIZE MONEY</p>
+              <h2 class="event">2. The Survey Sprint</h2>
+              <button onclick="window.location.href='events/civil2.html'">EXPLORE EVENT</button>
+              <p class="event">EXCITING PRIZE MONEY</p>
+            </div>
+          </center>
         </div>
-      </center>
+        <div class="face face2">
+          <h2>CIVIL</h2>
+        </div>
       </div>
-      <div class="face face2">
-        <h2>CIVIL</h2>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="face face1">
-        <div class="content">
-          <span class="stars"></span>
-          <div class="dept-header">Electronics & Telecommunication</div>
-          <h1 class="event">Events</h1>
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+            <div class="dept-header">Electronics & Telecommunication</div>
+            <h1 class="event">Events</h1>
             <h2 class="event">1. BATTLE BOTS</h2>
             <button onclick="window.location.href='events/etc1.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
             <h2 class="event">2. CODE AURA</h2>
             <button onclick="window.location.href='events/etc2.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>ENTC</h2>
         </div>
       </div>
-      <div class="face face2">
-        <h2>ENTC</h2>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="face face1">
-        <div class="content">
-          <span class="stars"></span>
-          <div class="dept-header">Electrical Engineering</div>
-          <h1 class="event">Events</h1>
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+            <div class="dept-header">Electrical Engineering</div>
+            <h1 class="event">Events</h1>
             <h2 class="event">1. ESCAPE ROOM</h2>
             <button onclick="window.location.href='events/electrical1.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
             <h2 class="event">2. ELECTRO-HUNT</h2>
             <button onclick="window.location.href='events/electrical2.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>ELECTRICAL</h2>
         </div>
       </div>
-      <div class="face face2">
-        <h2>ELECTRICAL</h2>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="face face1">
-        <div class="content">
-          <span class="stars"></span>
-          <div class="dept-header">Mechanical Engineering</div>
-          <h1 class="event">Events</h1>
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+            <div class="dept-header">Mechanical Engineering</div>
+            <h1 class="event">Events</h1>
             <h2 class="event">1. MAATICHA KHEL</h2>
             <button onclick="window.location.href='events/mech1.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
             <h2 class="event">2. CAD WAR 2K25</h2>
             <button onclick="window.location.href='events/mech2.html'">EXPLORE EVENT</button>
             <p class="event">EXCITING PRIZE MONEY</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>MECHANICAL</h2>
         </div>
       </div>
-      <div class="face face2">
-        <h2>MECHANICAL</h2>
-      </div>
     </div>
-  </div>
-  
-  <div class="foot">
-    <p>&copy; Techsymposium 2k25. DKTE.</p>
-    <p>Developed by Team AISA</p>
-  </div>
-</section>
+
+    <div class="foot">
+      <p>&copy; Techsymposium 2k25. DKTE.</p>
+      <p>Developed by Team AISA</p>
+    </div>
+  </section>
 </body>
+
 </html>
